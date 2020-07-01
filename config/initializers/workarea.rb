@@ -3,8 +3,8 @@ Workarea.configure do |config|
   # disabling certain modules from being loaded into the Sprockets
   # manifests on admin and storefront, so developers can focus on
   # rewriting the disabled modules.
-  config.legacy_javascripts = ActiveSupport::InheritableOptions.new(
-    admin: {
+  config.legacy_javascript = ActiveSupport::InheritableOptions.new(
+    admin: ActiveSupport::InheritableOptions.new(
       libraries: %w(
         webcomponentsjs-rails/MutationObserver
         i18n
@@ -169,8 +169,8 @@ Workarea.configure do |config|
         workarea/admin/modules/selects
         workarea/admin/modules/tribute_areas
       )
-    },
-    storefront: {
+    ),
+    storefront: ActiveSupport::InheritableOptions.new(
       libraries: %w(
         webcomponentsjs-rails/MutationObserver
         i18n
@@ -193,6 +193,23 @@ Workarea.configure do |config|
         waypoints/shortcuts/sticky
         jquery-unique-clone
         jquery_ujs
+      ),
+      templates: %w(
+        workarea/core/templates/lorem_ipsum_view
+        workarea/core/templates/reveal_password_button
+        workarea/storefront/templates/loading
+        workarea/storefront/templates/message
+        workarea/storefront/templates/message_dismiss_action
+        workarea/storefront/templates/button
+        workarea/storefront/templates/same_as_shipping_button_property
+        workarea/storefront/templates/saved_addresses_property
+        workarea/storefront/templates/log_out_link
+        workarea/storefront/templates/page_header_cart_count
+        workarea/storefront/templates/pagination_button
+        workarea/storefront/templates/back_to_top_button
+        workarea/storefront/templates/authenticity_token
+        workarea/storefront/templates/mobile_filters_nav_close_button
+        workarea/storefront/templates/optional_field_prompt
       ),
       configuration:   %w(
         workarea/core/config
@@ -251,6 +268,6 @@ Workarea.configure do |config|
         workarea/storefront/modules/lazy_images
         workarea/storefront/modules/privacy_popup
       )
-    }
+    )
   )
 end

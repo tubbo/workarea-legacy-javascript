@@ -131,7 +131,7 @@ WORKAREA.registerModule('analytics', (function () {
                 .find('[data-analytics]')
                     .addBack('[data-analytics]')
                     .each(function () {
-                        var data = $(this).data('analytics');
+                        var data = $(this).data('analyticsPacket');
 
                         if (isConditionsMatch(data)) {
                             iterator.call(this, data);

@@ -4,7 +4,7 @@ window.feature.testAll();
 
 <%
   # Library Dependencies
-  Workarea.config.legacy_javascripts.admin.libraries.each do |asset|
+  Workarea.config.legacy_javascript.admin.libraries.each do |asset|
     require_asset asset
   end
 
@@ -15,7 +15,7 @@ window.feature.testAll();
   require_asset 'workarea/core/feature_test_helper' if Rails.env.test?
 
   # JST Templates
-  Workarea.config.legacy_javascripts.jst.each do |asset|
+  Workarea.config.legacy_javascript.admin.templates.each do |asset|
     require_asset asset
   end
 
@@ -23,7 +23,7 @@ window.feature.testAll();
   append_javascripts('admin.templates')
 
   # Library Extensions
-  Workarea.config.legacy_javascripts.admin.library_extensions.each do |asset|
+  Workarea.config.legacy_javascript.admin.library_extensions.each do |asset|
     require_asset asset
   end
 
@@ -31,7 +31,7 @@ window.feature.testAll();
   require_asset 'workarea/core/workarea'
 
   # Configuration
-  Workarea.config.legacy_javascripts.admin.configuration.each do |asset|
+  Workarea.config.legacy_javascript.admin.configuration.each do |asset|
     require_asset asset
   end
 
@@ -39,12 +39,12 @@ window.feature.testAll();
   append_javascripts('admin.config')
 
   # Routing
-  Workarea.config.legacy_javascripts.admin.routing.each do |asset|
+  Workarea.config.legacy_javascript.admin.routing.each do |asset|
     require_asset asset
   end
 
   # Modules
-  Workarea.config.legacy_javascripts.admin.modules.each do |asset|
+  Workarea.config.legacy_javascript.admin.modules.each do |asset|
     require_asset asset
   end
 

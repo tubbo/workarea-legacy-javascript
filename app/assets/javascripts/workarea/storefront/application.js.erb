@@ -10,7 +10,7 @@
   append_javascripts('storefront.serviceworker_registrations')
 
   # Library Dependencies
-  Workarea.config.legacy_javascripts.storefront.libraries.each do |asset|
+  Workarea.config.legacy_javascript.storefront.libraries.each do |asset|
     require_asset asset
   end
 
@@ -18,7 +18,7 @@
   append_javascripts('storefront.dependencies')
 
   # JST Templates
-  Workarea.config.storefront.templates.each do |asset|
+  Workarea.config.legacy_javascript.storefront.templates.each do |asset|
     require_asset asset
   end
 
@@ -32,7 +32,7 @@
   require_asset 'workarea/core/workarea'
 
   # Configuration
-  Workarea.config.storefront.configuration.each do |asset|
+  Workarea.config.legacy_javascript.storefront.configuration.each do |asset|
     require_asset asset
   end
 
@@ -40,12 +40,12 @@
   append_javascripts('storefront.config')
 
   # Routing
-  Workarea.config.storefront.routing.each do |asset|
+  Workarea.config.legacy_javascript.storefront.routing.each do |asset|
     require_asset asset
   end
 
   # Modules
-  Workarea.config.legacy_javascripts.storefront.modules.each do |asset|
+  Workarea.config.legacy_javascript.storefront.modules.each do |asset|
     require_asset asset
   end
 
