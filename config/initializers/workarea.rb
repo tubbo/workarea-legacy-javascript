@@ -1,4 +1,8 @@
 Workarea.configure do |config|
+  # Configuration for each JS file in the manifest. This allows
+  # disabling certain modules from being loaded into the Sprockets
+  # manifests on admin and storefront, so developers can focus on
+  # rewriting the disabled modules.
   config.legacy_javascripts = ActiveSupport::InheritableOptions.new(
     admin: {
       libraries: %w(
