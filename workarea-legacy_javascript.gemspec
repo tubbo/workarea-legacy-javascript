@@ -35,4 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'webcomponentsjs-rails', '~> 0.7.12'
   spec.add_dependency 'strftime-rails', '~> 0.9.2'
   spec.add_dependency 'featurejs_rails', '~> 1.0.1'
+  spec.add_dependency 'teaspoon', '~> 1.2.0'
+  spec.add_dependency 'teaspoon-mocha', '~> 2.3.3'
+  spec.add_dependency 'mocha', '~> 1.3.0'
 end
